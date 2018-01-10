@@ -1,14 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      OCR to text
     </ion-title>
+    <ion-buttons end>
+      <button (click)="takePicture()">
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <img src="{{ base64Image }}" />
+
+  <ion-card-content>
+    <p>text : + {{imageTextResult}}</p>
+  </ion-card-content>
+
+  <ion-title text-wrap>
+  </ion-title>
+
 </ion-content>
